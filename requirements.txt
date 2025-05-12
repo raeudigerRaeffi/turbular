@@ -1,0 +1,23 @@
+fastapi == 0.115.12
+uvicorn == 0.29.0
+requests == 2.31.0
+sshtunnel ==  0.4.0
+chardet == 5.2.0
+sql-metadata == 2.10.0
+psycopg2-binary==2.9.8
+psycopg[binary,pool]== 3.2.1
+pytz==2023.3.post1
+sqlparse==0.4.4
+typing_extensions==4.8.0
+SQLAlchemy==2.0.21
+overrides == 7.4.0
+pymysql == 1.1.0
+oracledb == 1.4.1
+pyodbc == 4.0.39
+pandas == 2.1.4
+xlrd == 2.0.1
+google-cloud-bigquery == 3.17.2
+sqlglot[rs] == 23.0.0
+redshift-connector == 2.1.1
+grequests
+pysqlite3-binary
