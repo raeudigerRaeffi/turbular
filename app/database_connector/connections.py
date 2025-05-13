@@ -10,8 +10,8 @@ from app.fastapitypes.sql_connection import Db_Connection_Args
 def get_sqlalchemy_connection(sql_args:ConnectionDetails)->SqlAlchemyConnector:
     """
     Returns a SqlAlchemyConnector object.
-    :param sql_args: holds all necessary args for connection
-    :return: connection object for sqlalchemy db
+    @sql_args: holds all necessary args for connection
+    Return: connection object for sqlalchemy db
     """
     if sql_args.ssl:
         sql_args.ssl_credentials = '/etc/ssl/certs/ca-certificates.crt'
@@ -21,8 +21,8 @@ def get_sqlalchemy_connection(sql_args:ConnectionDetails)->SqlAlchemyConnector:
 def get_redshift_connection(redshift_args:RedshiftConnection) -> RedshiftConnector:
     """
     Returns a RedshiftConnector object.
-    :param redshift_args: holds all necessary args for connection
-    :return: connection object for redshift db
+    @redshift_args: holds all necessary args for connection
+    Return: connection object for redshift db
     """
     return RedshiftConnector(redshift_args)
 

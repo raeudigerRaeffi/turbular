@@ -49,7 +49,7 @@ class BaseDBConnector(ABC):
         """
         pass
 
-    def execute_sql_statement(self, _sql, _max_rows):
+    def execute_sql_statement(self, _sql, _max_rows, autocommit=False):
         """
         @_sql:str
         Returns result of sql statement
@@ -84,7 +84,7 @@ class BaseDBConnector(ABC):
     def return_schema_names(self) -> list[str]:
         pass
 
-    def return_schemas(self, scan_enums: bool ) -> list[Schema]:
+    def return_schemas(self, scan_enums: bool) -> list[Schema]:
         output_schemas = []
         all_schemas = self.return_schema_names()
         for schema in all_schemas:

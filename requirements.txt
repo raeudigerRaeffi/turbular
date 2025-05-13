@@ -21,3 +21,4 @@ sqlglot[rs] == 23.0.0
 redshift-connector == 2.1.1
 grequests
 pysqlite3-binary
+pytest

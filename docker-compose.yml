@@ -1,12 +1,14 @@
 services:
-    backend:
-        build:
-          context: .
-        volumes:
-          - ./app:/usr/src/server/app
+  backend:
+    build:
+      context: .
+      target: "dev"
+    volumes:
+      - ./app:/usr/src/server/app
+      - ./tests:/usr/src/server/tests
 
-        privileged: true
-        cap_add:
-          - NET_ADMIN # This specifically adds the NET_ADMIN capability to your container
-        ports:
-          - "8000:8000"
+    privileged: true
+    cap_add:
+      - NET_ADMIN # This specifically adds the NET_ADMIN capability to your container
+    ports:
+      - "8000:8000"

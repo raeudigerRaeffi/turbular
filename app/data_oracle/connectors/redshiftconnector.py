@@ -88,7 +88,7 @@ class RedshiftConnector(BaseDBConnector):
         return Table(table, pk_name, all_cached_cols, _table_type, cached_fk_relations)
 
     @override
-    def execute_sql_statement(self, _sql, _max_rows=None):
+    def execute_sql_statement(self, _sql, _max_rows=None, autocommit=False):
 
         """
         @_sql:str
@@ -105,5 +105,8 @@ class RedshiftConnector(BaseDBConnector):
                 counter += 1
                 if _max_rows is not None and _max_rows < counter:
                     break
+
+            if autocommit:
+                self.connection.commit()  # TODO check whether this applies to all previous sql executes
 
         return returned_rows

@@ -145,11 +145,13 @@ class BigQueryConnector(BaseDBConnector):
         return [x.dataset_id for x in self.connection.list_datasets()]
 
     @override
-    def execute_sql_statement(self, _sql, _max_rows=None):
+    def execute_sql_statement(self, _sql, _max_rows=None, autocommit=True):
         """
         @_sql:str
         Returns result of sql statement
         """
+        if not autocommit:
+            raise Warning(f"BigQuery always autocommits, the behavious can not be disabled")
         results = []
         counter = 0
         for usage_row in self.connection.query_and_wait(_sql):

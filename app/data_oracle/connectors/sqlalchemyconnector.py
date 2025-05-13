@@ -1,6 +1,5 @@
 import datetime
 import decimal
-
 from overrides import override
 from sqlalchemy import create_engine, inspect, text
 
@@ -205,7 +204,7 @@ class SqlAlchemyConnector(BaseDBConnector):
             return _input
 
     @override
-    def execute_sql_statement(self, _sql, _max_rows=None):
+    def execute_sql_statement(self, _sql, _max_rows=None, autocommit=False):
 
         """
         @_sql:str
@@ -225,7 +224,8 @@ class SqlAlchemyConnector(BaseDBConnector):
                 counter += 1
                 if _max_rows is not None and _max_rows < counter:
                     break
-
+            if autocommit:
+                conn.commit()
         return results
 
 #    def __del__(self):
