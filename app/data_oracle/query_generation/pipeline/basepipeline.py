@@ -113,7 +113,7 @@ class PipelineSqlGen:
             custom_prompt += f'Answer: {examples["answer"][i]}\n\n'
         self.custom_prompt = custom_prompt
 
-    def overwrite_custom_examples(self, provided_examples: str)-> None:
+    def overwrite_custom_examples(self, provided_examples: str) -> None:
         """
         Sets a new custom example prompt
         :param provided_examples: new prompt provided by the user
@@ -138,14 +138,15 @@ class PipelineSqlGen:
         layout_translation_map = self.db.translations_map
         return translate_sql_args(sql_command, layout_translation_map, self.connection.type)
 
-    def execute_sql_statement(self, sql_command: str, number_rows: int) -> list:
+    def execute_sql_statement(self, sql_command: str, number_rows: int, autocommit=False) -> list:
         """
         Executes a sql statement against the database and returns the results
         :param sql_command: sql command as a string
         :param number_rows: maximum number of rows to return
+        :param autocommit: whether to commit changes after execution
         :return: rows as a list of objects
         """
-        return self.connection.execute_sql_statement(sql_command, number_rows)
+        return self.connection.execute_sql_statement(sql_command, number_rows, autocommit)
 
     def generate_prompt(self, question: str, prompting_mode: Prompt_Type):
         prompt = ""
