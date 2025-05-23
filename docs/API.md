@@ -22,7 +22,8 @@ Currently, the API does not require authentication. However, database credential
 POST /get_schema
 ```
 
-Retrieves the schema of a connected database. Can return both native and normalized schemas.
+Retrieves the schema of a connected database. Can return both native and normalized schemas with enforced naming conventions. If you normalize a schema make sure to unnormalize
+the resulting SQL query from an LLM when executing it.
 
 **Request Body:**
 ```json
