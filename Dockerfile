@@ -1,4 +1,3 @@
-
 # pull official base image
 FROM python:3.11.4-slim-buster AS base
 
@@ -51,5 +50,31 @@ RUN apt-get update -yq \
         nodejs
 RUN apt install unixodbc -y
 
+# create directory for the app files
+RUN mkdir -p /usr/src/server/app/files/bqkeys
+RUN mkdir -p /usr/src/server/app/files/sqlite
+
+# Create non-root user
+RUN groupadd -r turbular && useradd -r -g turbular turbular
+RUN chown -R turbular:turbular /usr/src/server/app/files
+
+
+# Copy project
+COPY . .
+
+# Development target
 FROM base as dev
 CMD ["uvicorn", "app.main:app", "--log-level", "debug", "--proxy-headers", "--host", "0.0.0.0", "--port", "8000", "--reload" ]
+
+# Production target
+FROM base as prod
+
+# Switch to non-root user
+USER turbular
+
+# Create startup script
+COPY scripts/start-prod.sh /usr/src/server/start-prod.sh
+RUN chmod +x /usr/src/server/start-prod.sh
+
+# Run with gunicorn in production
+CMD ["/usr/src/server/start-prod.sh"]

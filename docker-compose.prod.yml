@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: .
+      target: "prod"
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app/files:/usr/src/server/app/files
+
+ 

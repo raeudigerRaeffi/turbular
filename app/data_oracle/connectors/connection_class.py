@@ -12,7 +12,7 @@ class ConnectionDetails(BaseModel):
     ssl: bool = False
     ssl_credentials: Optional[str] = None
 
-    def create_url(self, driver: str, suffix: Dict = {}):
+    def return_url_string(self, driver: str, suffix: Dict = {}):
         return URL.create(
             driver,
             username=self.username,

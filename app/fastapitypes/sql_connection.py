@@ -1,9 +1,9 @@
 from pydantic import BaseModel
 from enum import Enum
 
-from app.data_oracle import ConnectionDetails, BigQueryConnection, RedshiftConnection
+from app.data_oracle import ConnectionDetails, BigQueryConnection, RedshiftConnection, FileConnection
 
-Db_Connection_Args = ConnectionDetails |  BigQueryConnection | RedshiftConnection
+Db_Connection_Args = ConnectionDetails |  BigQueryConnection | RedshiftConnection | FileConnection
 
 
 class SupportedDb(str, Enum):

@@ -16,9 +16,11 @@ oracledb == 1.4.1
 pyodbc == 4.0.39
 pandas == 2.1.4
 xlrd == 2.0.1
+python-multipart
 google-cloud-bigquery == 3.17.2
 sqlglot[rs] == 23.0.0
 redshift-connector == 2.1.1
 grequests
 pysqlite3-binary
 pytest
+gunicorn
