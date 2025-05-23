@@ -29,7 +29,7 @@ Turbular is an open-source Model Context Protocol (MCP) server that enables seam
 | BigQuery     | ✅     | Service Account      | <img src="https://www.vectorlogo.zone/logos/google_bigquery/google_bigquery-icon.svg" width="20" height="20"> |
 | Oracle       | ✅     | Password             | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg" width="20" height="20"> |
 | MS SQL       | ✅     | Password, Windows    | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" width="20" height="20"> |
-| Redshift     | ✅     | Password, IAM        | <img src="https://static-00.iconduck.com/assets.00/aws-redshift-icon-454x512-53egw2wg.png" width="20" height="20"> |
+| Redshift     | ✅     | Password, IAM        | <img src="https://cdn2.iconfinder.com/data/icons/amazon-aws-stencils/100/Database_copy_Amazon_RedShift-512.png" width="20" height="20"> |
 
 ## 🚀 Quick Start
 
