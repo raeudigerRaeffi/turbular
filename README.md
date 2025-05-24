@@ -73,7 +73,7 @@ Turbular is an open-source Model Context Protocol (MCP) server that enables seam
 ```http
 POST /get_schema
 ```
-Retrieve the schema of a connected database.
+Retrieve the schema of a connected database for your LLM agent.
 
 **Parameters:**
 - `db_info`: Database connection arguments
@@ -163,6 +163,13 @@ We welcome contributions! Here's how you can help:
 - Write tests for new features
 - Update documentation as needed
 - Use meaningful commit messages
+
+### Roadmap
+1. Add more testing and commit hooks
+2. Add SSH support for database connection
+3. Add APIs as datasources using [steampipe](https://steampipe.io/)
+4. Enable local schema saving for databases to which the server has already connected
+5. Add more datasources (snowflake,mongodb etc.)
 
 ## 🧪 Testing
 
