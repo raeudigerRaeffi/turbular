@@ -15,21 +15,21 @@ Turbular is an open-source Model Context Protocol (MCP) server that enables seam
 - 🔌 **Multi-Database Support**: Connect to various database types through a single API
 - 🔄 **Schema Normalization**: Automatically normalize database schemas to correct naming conventions for LLM compatibility
 - 🔒 **Secure Connections**: Support for SSL and various authentication methods
-- 🚀 **High Performance**: Built with FastAPI and async support
-- 📝 **Query Transformation**: Convert between normalized and native database queries
+- 🚀 **High Performance**: Optimizes your LLM generated queries
+- 📝 **Query Transformation**: Let LLM generate queries against normalized layouts and transform them into their unnormalized form
 - 🐳 **Docker Support**: Easy deployment with Docker and Docker Compose
 
 ## 🗄️ Supported Databases
 
-| Database Type | Status | Authentication Methods | Icon |
-|--------------|--------|----------------------|------|
-| PostgreSQL   | ✅     | Password, SSL        | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" width="20" height="20"> |
-| MySQL        | ✅     | Password, SSL        | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="20" height="20"> |
-| SQLite       | ✅     | File-based           | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlite/sqlite-original.svg" width="20" height="20"> |
-| BigQuery     | ✅     | Service Account      | <img src="https://www.vectorlogo.zone/logos/google_bigquery/google_bigquery-icon.svg" width="20" height="20"> |
-| Oracle       | ✅     | Password             | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg" width="20" height="20"> |
-| MS SQL       | ✅     | Password, Windows    | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" width="20" height="20"> |
-| Redshift     | ✅     | Password, IAM        | <img src="https://cdn2.iconfinder.com/data/icons/amazon-aws-stencils/100/Database_copy_Amazon_RedShift-512.png" width="20" height="20"> |
+| Database Type | Status |  Icon |
+|--------------|--------|------|
+| PostgreSQL   | ✅     |  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" width="20" height="20"> |
+| MySQL        | ✅     |  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="20" height="20"> |
+| SQLite       | ✅     | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlite/sqlite-original.svg" width="20" height="20"> |
+| BigQuery     | ✅     |  <img src="https://www.vectorlogo.zone/logos/google_bigquery/google_bigquery-icon.svg" width="20" height="20"> |
+| Oracle       | ✅     |  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg" width="20" height="20"> |
+| MS SQL       | ✅     |  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" width="20" height="20"> |
+| Redshift     | ✅     |  <img src="https://cdn2.iconfinder.com/data/icons/amazon-aws-stencils/100/Database_copy_Amazon_RedShift-512.png" width="20" height="20"> |
 
 ## 🚀 Quick Start
 
@@ -83,7 +83,7 @@ Retrieve the schema of a connected database.
 ```http
 POST /execute_query
 ```
-Execute SQL queries on the connected database.
+Optimizes query and then execute SQL queries on the connected database.
 
 **Parameters:**
 - `db_info`: Database connection arguments
@@ -146,23 +146,6 @@ Get a list of all supported database types.
    - Swagger UI: http://localhost:8000/docs
    - ReDoc: http://localhost:8000/redoc
 
-## 🚀 Production Deployment
-
-1. Set up environment variables:
-   ```bash
-   cp .env.example .env
-   ```
-
-2. Start the production environment:
-   ```bash
-   ./scripts/run_prod.sh
-   ```
-
-Production setup includes:
-- Gunicorn with multiple workers
-- PostgreSQL with persistent storage
-- Proper security settings
-- Health monitoring
 
 ## 🤝 Contributing
 
