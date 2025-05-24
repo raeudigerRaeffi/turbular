@@ -18,6 +18,7 @@ Turbular is an open-source Model Context Protocol (MCP) server that enables seam
 - 🚀 **High Performance**: Optimizes your LLM generated queries
 - 📝 **Query Transformation**: Let LLM generate queries against normalized layouts and transform them into their unnormalized form
 - 🐳 **Docker Support**: Easy deployment with Docker and Docker Compose
+- 🔧 **Easy to Extend**: Adding new database providers can be easily done by extending the [BaseDBConnector interface](app/data_oracle/connectors/baseconnector.py) 
 
 ## 🗄️ Supported Databases
 
@@ -170,7 +171,7 @@ We welcome contributions! Here's how you can help:
 3. Add APIs as datasources using [steampipe](https://steampipe.io/)
 4. Enable local schema saving for databases to which the server has already connected
 5. Add more datasources (snowflake, mongodb, excel, etc.)
-
+6. Add authentication protection to routes
 
 ## 🧪 Testing
 
