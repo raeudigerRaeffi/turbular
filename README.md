@@ -231,7 +231,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - FastAPI for the amazing framework
 - SQLAlchemy for database support
-- [Henry Albert Jupiter Hommel](https://www.linkedin.com/in/henry-hommel-304675234/?originalSubdomain=de) for his development support
+- [@henryclickclack] (https://github.com/henryclickclack) [Henry Albert Jupiter Hommel](https://www.linkedin.com/in/henry-hommel-304675234/?originalSubdomain=de) as Co-Developer ❤️
 - All our contributors and users
 
 ## 📞 Support
