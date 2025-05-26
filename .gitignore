@@ -1,0 +1,3 @@
+app/tests/.pytest_cache
+app/tests/__pycache__
+testdata/
