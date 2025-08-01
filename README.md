@@ -1,4 +1,4 @@
-# Turbular 
+# Turbular
 
 <div align="center">
 
@@ -8,29 +8,34 @@
 
 </div>
 
-Turbular is an open-source Model Context Protocol (MCP) server that enables seamless database connectivity for Language Models (LLMs). It provides a unified API interface to interact with various database types, making it perfect for AI applications that need to work with multiple data sources.
+Turbular is an open-source Model Context Protocol (MCP) server that enables seamless database connectivity for Language
+Models (LLMs). It provides a unified API interface to interact with various database types, making it perfect for AI
+applications that need to work with multiple data sources.
 
 ## ✨ Features
 
 - 🔌 **Multi-Database Support**: Connect to various database types through a single API
-- 🔄 **Schema Normalization**: Automatically normalize database schemas to correct naming conventions for LLM compatibility
+- 🔄 **Schema Normalization**: Automatically normalize database schemas to correct naming conventions for LLM
+  compatibility
 - 🔒 **Secure Connections**: Support for SSL and various authentication methods
 - 🚀 **High Performance**: Optimizes your LLM generated queries
-- 📝 **Query Transformation**: Let LLM generate queries against normalized layouts and transform them into their unnormalized form
+- 📝 **Query Transformation**: Let LLM generate queries against normalized layouts and transform them into their
+  unnormalized form
 - 🐳 **Docker Support**: Easy deployment with Docker and Docker Compose
-- 🔧 **Easy to Extend**: Adding new database providers can be easily done by extending the [BaseDBConnector interface](app/data_oracle/connectors/baseconnector.py) 
+- 🔧 **Easy to Extend**: Adding new database providers can be easily done by extending
+  the [BaseDBConnector interface](app/data_oracle/connectors/baseconnector.py)
 
 ## 🗄️ Supported Databases
 
-| Database Type | Status |  Icon |
-|--------------|--------|------|
-| PostgreSQL   | ✅     |  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" width="20" height="20"> |
-| MySQL        | ✅     |  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="20" height="20"> |
-| SQLite       | ✅     | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlite/sqlite-original.svg" width="20" height="20"> |
-| BigQuery     | ✅     |  <img src="https://www.vectorlogo.zone/logos/google_bigquery/google_bigquery-icon.svg" width="20" height="20"> |
-| Oracle       | ✅     |  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg" width="20" height="20"> |
-| MS SQL       | ✅     |  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" width="20" height="20"> |
-| Redshift     | ✅     |  <img src="https://cdn2.iconfinder.com/data/icons/amazon-aws-stencils/100/Database_copy_Amazon_RedShift-512.png" width="20" height="20"> |
+| Database Type | Status | Icon                                                                                                                                               |
+|---------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| PostgreSQL    | ✅      | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" width="20" height="20">              |
+| MySQL         | ✅      | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="20" height="20">                        |
+| SQLite        | ✅      | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlite/sqlite-original.svg" width="20" height="20">                      |
+| BigQuery      | ✅      | <img src="https://www.vectorlogo.zone/logos/google_bigquery/google_bigquery-icon.svg" width="20" height="20">                                      |
+| Oracle        | ✅      | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg" width="20" height="20">                      |
+| MS SQL        | ✅      | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" width="20" height="20"> |
+| Redshift      | ✅      | <img src="https://cdn2.iconfinder.com/data/icons/amazon-aws-stencils/100/Database_copy_Amazon_RedShift-512.png" width="20" height="20">            |
 
 ## 🚀 Quick Start
 
@@ -71,22 +76,28 @@ Turbular is an open-source Model Context Protocol (MCP) server that enables seam
 ### Database Operations
 
 #### Get Database Schema
+
 ```http
 POST /get_schema
 ```
+
 Retrieve the schema of a connected database for your LLM agent.
 
 **Parameters:**
+
 - `db_info`: Database connection arguments
 - `return_normalize_schema` (optional): Return schema in LLM-friendly format
 
 #### Execute Query
+
 ```http
 POST /execute_query
 ```
+
 Optimizes query and then execute SQL queries on the connected database.
 
 **Parameters:**
+
 - `db_info`: Database connection arguments
 - `query`: SQL query string
 - `normalized_query`: Boolean indicating if query is normalized
@@ -96,37 +107,47 @@ Optimizes query and then execute SQL queries on the connected database.
 ### File Management
 
 #### Upload BigQuery Key
+
 ```http
 POST /upload-bigquery-key
 ```
+
 Upload a BigQuery service account key file.
 
 **Parameters:**
+
 - `project_id`: BigQuery project ID
 - `key_file`: JSON key file
 
 #### Upload SQLite Database
+
 ```http
 POST /upload-sqlite-file
 ```
+
 Upload a SQLite database file.
 
 **Parameters:**
+
 - `database_name`: Name to identify the database
 - `db_file`: SQLite database file (.db or .sqlite)
 
 ### Utility Endpoints
 
 #### Health Check
+
 ```http
 GET /health
 ```
+
 Verify if the API is running.
 
 #### List Supported Databases
+
 ```http
 GET /supported-databases
 ```
+
 Get a list of all supported database types.
 
 ## 🔧 Development Setup
@@ -139,14 +160,13 @@ Get a list of all supported database types.
    ```
 
 3. The development server includes:
-   - FastAPI server with hot reload
-   - PostgreSQL test database
-   - Pre-configured test data
+    - FastAPI server with hot reload
+    - PostgreSQL test database
+    - Pre-configured test data
 
 4. Access the API documentation:
-   - Swagger UI: http://localhost:8000/docs
-   - ReDoc: http://localhost:8000/redoc
-
+    - Swagger UI: http://localhost:8000/docs
+    - ReDoc: http://localhost:8000/redoc
 
 ## 🤝 Contributing
 
@@ -166,6 +186,7 @@ We welcome contributions! Here's how you can help:
 - Use meaningful commit messages
 
 ### Roadmap
+
 1. Add more testing, formatting and commit hooks
 2. Add SSH support for database connection
 3. Add APIs as datasources using [steampipe](https://steampipe.io/)
@@ -176,11 +197,13 @@ We welcome contributions! Here's how you can help:
 ## 🧪 Testing
 
 Run the test suite:
+
 ```bash
 pytest
 ```
 
 For development tests with the included PostgreSQL:
+
 ```bash
 ./scripts/test_connection.py
 ```
@@ -193,6 +216,7 @@ For development tests with the included PostgreSQL:
 ## 📝 Connection Examples
 
 ### PostgreSQL
+
 ```python
 connection_info = {
     "database_type": "PostgreSQL",
@@ -206,6 +230,7 @@ connection_info = {
 ```
 
 ### BigQuery
+
 ```python
 connection_info = {
     "database_type": "BigQuery",
@@ -216,6 +241,7 @@ connection_info = {
 ```
 
 ### SQLite
+
 ```python
 connection_info = {
     "type": "SQLite",
@@ -223,15 +249,12 @@ connection_info = {
 }
 ```
 
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - FastAPI for the amazing framework
 - SQLAlchemy for database support
-- [@henryclickclack](https://github.com/henryclickclack) [Henry Albert Jupiter Hommel](https://www.linkedin.com/in/henry-hommel-304675234/?originalSubdomain=de) as Co-Developer ❤️
+- [@henryclickclack](https://github.com/henryclickclack) [Henry Albert Jupiter Hommel](https://www.linkedin.com/in/henry-hommel-304675234/?originalSubdomain=de)
+  as Co-Developer ❤️
 - All our contributors and users
 
 ## 📞 Support

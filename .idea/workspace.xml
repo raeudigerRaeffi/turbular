@@ -5,71 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc1f4df9-763e-41e0-9706-c626f3fa34d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/test.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/turbular.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CONTRIBUTING.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/connectors/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/connectors/baseconnector.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/connectors/bigqueryconnector.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/connectors/connection_class.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/connectors/redshiftconnector.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/connectors/sqlalchemyconnector.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/db_schema/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/db_schema/base_db_class.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/db_schema/database_schema.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/db_schema/filterobject.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/db_schema/foreign_key_schema.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/db_schema/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/enums/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/enums/base_enum.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/enums/filter_enum.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/enums/llm_enums.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/enums/sql_enums.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/query_generation/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/query_generation/embedding/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/query_generation/pipeline/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/query_generation/pipeline/basepipeline.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/query_generation/pipeline/local_pipeline.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data_oracle/query_generation/pipeline/prompts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/database_connector/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/database_connector/connections.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fastapitypes/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fastapitypes/api_types.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fastapitypes/datasource.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fastapitypes/request_types.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fastapitypes/sql_connection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/files/bqkeys/.gitadd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/files/keys/.gitadd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/files/sqlite/.gitadd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/files/sqlite/chinook.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/globals.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/request_types/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.prod.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/API.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.dev.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/init-db.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/start-prod.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/test_connection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/data_oracle/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/data_oracle/test_db_schema.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/data_oracle/test_normalize_queries.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/data_oracle/test_pipeline.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/data_oracle/test_table_schema.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,24 +43,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests in tests.executor": "Run",
-    "Python.test_db_schema.executor": "Run",
-    "Python.test_table_schema.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "CLEANUP",
-    "last_opened_file_path": "C:/Users/raffa/Documents/coding_projects/turbular",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "actions.on.save",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests in tests.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_db_schema.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_table_schema.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;CLEANUP&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/raffa/Documents/coding_projects/turbular&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\raffa\Documents\coding_projects\turbular\tests\data_oracle" />
